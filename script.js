@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
  });
  
  (function() {
-   const _0xc87b = ['ZXllc3RvcmU=', 'aHR0cHM6Ly9kaXNjb3JkLmdnL0Vrd1d2RlM='];
+   const _0xc87b = ['WGNsaXBzZSBOZXR3b3Jrcw==', 'aHR0cHM6Ly9kaXNjb3JkLmdnL2hkM1NZR3hwYjU='];
  
    const config = {
      checkInterval: 1000,
@@ -872,12 +872,12 @@ document.addEventListener('DOMContentLoaded', function() {
              <p class="text-white/90 text-sm">Please use alternative contact methods:</p>
            </div>
            <div class="flex gap-2">
-             <a href="https://discord.gg/EkwWvFS" target="_blank" 
+             <a href="https://discord.gg/hd3SYGxpb5" target="_blank" 
                class="flex-1 px-4 py-2.5 bg-[#5865F2]/10 hover:bg-[#5865F2]/20 rounded-lg text-[#5865F2] hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group">
                <i class="fab fa-discord text-lg group-hover:scale-110 transition-transform"></i>
                <span class="text-sm font-medium">Discord</span>
              </a>
-             <a href="mailto:rustplugintr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}" 
+             <a href="mailto:xclipsenetworks@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}" 
                class="flex-1 px-4 py-2.5 bg-primary/10 hover:bg-primary/20 rounded-lg text-primary hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group">
                <i class="fas fa-envelope text-lg group-hover:scale-110 transition-transform"></i>
                <span class="text-sm font-medium">Email</span>
