@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open BD Shortcut</title>
+</head>
+<body>
+    <h1>Open BD Shortcut</h1>
+    <button onclick="openBD()">Open BD</button>
+
+    <script>
+        function openBD() {
+            fetch('/open-bd')
+                .then(res => res.text())
+                .then(msg => alert(msg))
+                .catch(err => alert('Error: ' + err));
+        }
+    </script>
+</body>
+</html>
