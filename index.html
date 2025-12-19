@@ -6,7 +6,9 @@
   <title>★》Xclipse Networks《★ | Coming Soon</title>
 
   <link rel="icon" href="xclipsenetworks-removebg-preview.png">
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -22,156 +24,157 @@
           },
           fontFamily: {
             sans: ['Montserrat', 'sans-serif']
+          },
+          animation: {
+            'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
           }
         }
       }
     }
   </script>
+
+  <style>
+    #glow-container div { transition: transform 0.3s ease-out; }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  </style>
 </head>
 
-<body class="bg-dark text-white font-sans overflow-hidden">
+<body class="bg-dark text-white font-sans overflow-hidden min-h-screen">
 
-<!-- Background Glow -->
-<div class="absolute inset-0 -z-10">
-  <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-  <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
+<div id="glow-container" class="absolute inset-0 -z-10 overflow-hidden">
+  <div id="glow-1" class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow"></div>
+  <div id="glow-2" class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-emerald-500/10 rounded-full blur-[100px] animate-pulse"></div>
 </div>
 
-<main class="min-h-screen flex items-center justify-center px-6">
-  <div class="max-w-3xl w-full text-center bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-10 shadow-2xl">
+<main class="min-h-screen flex items-center justify-center px-4">
+  <div class="max-w-2xl w-full text-center glass-card rounded-3xl p-8 shadow-2xl animate__animated animate__fadeInUp">
 
-    <!-- Logo -->
     <div class="flex justify-center mb-6">
-      <div class="relative">
-        <div class="absolute -inset-1 bg-gradient-to-r from-primary to-emerald-400 blur opacity-50 rounded-full"></div>
-        <div class="relative w-24 h-24 bg-dark-light rounded-full p-3">
-          <img src="xclipsenetworks-removebg-preview.png" class="w-full h-full object-contain">
+      <div class="relative group animate__animated animate__zoomIn">
+        <div class="absolute -inset-1.5 bg-gradient-to-r from-primary to-emerald-400 blur opacity-30 group-hover:opacity-80 transition duration-500 rounded-full"></div>
+        <div class="relative w-20 h-20 bg-dark-light rounded-full p-3 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+          <img src="xclipsenetworks-removebg-preview.png" class="w-full h-full object-contain" alt="Logo">
         </div>
       </div>
     </div>
 
-    <!-- Title -->
-    <h1 class="text-4xl sm:text-5xl font-extrabold mb-3">
-      <span>★》Xclipse</span>
-      <span class="text-primary"> Networks《★</span>
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 tracking-tight animate__animated animate__fadeInDown">
+      <span class="text-white">★》Xclipse</span>
+      <span class="text-primary drop-shadow-[0_0_10px_rgba(16,185,129,0.4)]"> Networks《★</span>
     </h1>
 
-    <p class="text-gray-300 mb-8 text-lg">
-      Launching February 2026 — be the first to know.
+    <p class="text-gray-400 mb-8 text-base sm:text-lg font-medium animate__animated animate__fadeIn animate__delay-1s">
+      Launching February 2026
     </p>
 
-    <!-- Countdown -->
-    <div class="grid grid-cols-4 gap-4 max-w-xl mx-auto mb-10">
-      <div class="bg-dark-light/70 rounded-xl p-4">
-        <div id="days" class="text-3xl font-bold text-primary">00</div>
-        <div class="text-xs text-gray-400 uppercase">Days</div>
+    <div class="grid grid-cols-4 gap-2 sm:gap-4 max-w-lg mx-auto mb-10 animate__animated animate__fadeInUp animate__delay-1s">
+      <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+        <div id="days" class="text-2xl sm:text-3xl font-black text-primary">00</div>
+        <div class="text-[9px] text-gray-500 uppercase font-bold">Days</div>
       </div>
-      <div class="bg-dark-light/70 rounded-xl p-4">
-        <div id="hours" class="text-3xl font-bold text-primary">00</div>
-        <div class="text-xs text-gray-400 uppercase">Hours</div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+        <div id="hours" class="text-2xl sm:text-3xl font-black text-primary">00</div>
+        <div class="text-[9px] text-gray-500 uppercase font-bold">Hrs</div>
       </div>
-      <div class="bg-dark-light/70 rounded-xl p-4">
-        <div id="minutes" class="text-3xl font-bold text-primary">00</div>
-        <div class="text-xs text-gray-400 uppercase">Minutes</div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+        <div id="minutes" class="text-2xl sm:text-3xl font-black text-primary">00</div>
+        <div class="text-[9px] text-gray-500 uppercase font-bold">Min</div>
       </div>
-      <div class="bg-dark-light/70 rounded-xl p-4">
-        <div id="seconds" class="text-3xl font-bold text-primary">00</div>
-        <div class="text-xs text-gray-400 uppercase">Seconds</div>
+      <div class="bg-white/5 border border-white/10 rounded-xl p-3">
+        <div id="seconds" class="text-2xl sm:text-3xl font-black text-primary">00</div>
+        <div class="text-[9px] text-gray-500 uppercase font-bold">Sec</div>
       </div>
     </div>
 
-    <!-- Notify Form -->
-    <form id="notifyForm" class="max-w-md mx-auto space-y-4">
-      <input
-        type="text"
-        id="name"
-        placeholder="Your Name"
-        required
-        class="w-full px-4 py-3 rounded-xl bg-dark-light border border-white/10 focus:outline-none focus:border-primary"
-      />
-      <input
-        type="email"
-        id="email"
-        placeholder="Your Email"
-        required
-        class="w-full px-4 py-3 rounded-xl bg-dark-light border border-white/10 focus:outline-none focus:border-primary"
-      />
-      <button
-        type="submit"
-        class="w-full bg-primary hover:bg-emerald-600 transition-all py-3 rounded-xl font-bold flex items-center justify-center gap-2">
-        <i class="fas fa-bell"></i>
-        Notify Me
+    <form id="notifyForm" class="max-w-sm mx-auto space-y-3 animate__animated animate__fadeInUp animate__delay-2s">
+      <input type="text" id="userName" placeholder="Your Name" required
+        class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:outline-none focus:border-primary/50 transition-all text-sm">
+      <input type="email" id="userEmail" placeholder="Your Email" required
+        class="w-full px-4 py-3 rounded-xl bg-dark border border-white/10 focus:outline-none focus:border-primary/50 transition-all text-sm">
+      <button type="submit" id="submitBtn"
+        class="w-full bg-primary hover:bg-emerald-400 text-dark font-bold py-3 rounded-xl transition-all flex items-center justify-center gap-2 transform active:scale-95 shadow-lg">
+        <i class="fas fa-bell"></i> NOTIFY ME
       </button>
     </form>
 
-    <p id="status" class="text-sm text-gray-400 mt-4"></p>
+    <p id="status" class="text-xs font-semibold mt-4 h-4"></p>
 
-    <!-- Footer -->
-    <div class="mt-8 text-xs text-gray-500">
-      © 2026 ★》Xclipse Networks《★
+    <div class="flex justify-center gap-4 mt-8">
+      <a href="https://www.youtube.com/@XCLP-LEEROY" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-red-600 transition-all transform hover:-translate-y-1">
+        <i class="fab fa-youtube text-lg"></i>
+      </a>
+      <a href="https://www.instagram.com/xclp_leeroy" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-pink-600 transition-all transform hover:-translate-y-1">
+        <i class="fab fa-instagram text-lg"></i>
+      </a>
+      <a href="https://www.tiktok.com/@xclp.leeroy" target="_blank" class="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-black transition-all transform hover:-translate-y-1">
+        <i class="fab fa-tiktok text-lg"></i>
+      </a>
     </div>
+
   </div>
 </main>
 
 <script>
-/* =========================
-   COUNTDOWN (Feb 7, 2026)
-========================= */
+/* Mouse Reactive Glow */
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 40;
+  const y = (e.clientY / window.innerHeight - 0.5) * 40;
+  document.getElementById('glow-1').style.transform = `translate(${x}px, ${y}px)`;
+  document.getElementById('glow-2').style.transform = `translate(${-x}px, ${-y}px)`;
+});
+
+/* Countdown */
 const launchDate = new Date("2026-02-07T00:00:00").getTime();
+function update() {
+  const now = new Date().getTime();
+  const gap = launchDate - now;
+  if (gap <= 0) return;
 
-setInterval(() => {
-  const now = Date.now();
-  const d = launchDate - now;
-  if (d < 0) return;
+  const d = 1000 * 60 * 60 * 24, h = 1000 * 60 * 60, m = 1000 * 60, s = 1000;
+  document.getElementById("days").innerText = Math.floor(gap / d).toString().padStart(2, '0');
+  document.getElementById("hours").innerText = Math.floor((gap % d) / h).toString().padStart(2, '0');
+  document.getElementById("minutes").innerText = Math.floor((gap % h) / m).toString().padStart(2, '0');
+  document.getElementById("seconds").innerText = Math.floor((gap % m) / s).toString().padStart(2, '0');
+}
+setInterval(update, 1000); update();
 
-  document.getElementById("days").innerText = Math.floor(d / (1000*60*60*24));
-  document.getElementById("hours").innerText = Math.floor((d / (1000*60*60)) % 24);
-  document.getElementById("minutes").innerText = Math.floor((d / (1000*60)) % 60);
-  document.getElementById("seconds").innerText = Math.floor((d / 1000) % 60);
-}, 1000);
-
-/* =========================
-   DISCORD WEBHOOK FORM
-========================= */
+/* Webhook */
+const notifyForm = document.getElementById("notifyForm");
+const statusMsg = document.getElementById("status");
+const submitBtn = document.getElementById("submitBtn");
 const webhookURL = "https://discord.com/api/webhooks/1451413240243556485/KLUQiIyiYwUw0o6rwNu14KlAbuij_-kBZSoHUS5ZTqEmLy0Hcr-UY4-VmQU3pX5tX7mW";
 
-document.getElementById("notifyForm").addEventListener("submit", async (e) => {
+notifyForm.addEventListener("submit", async (e) => {
   e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const status = document.getElementById("status");
-
-  status.innerText = "Sending...";
-
-  const payload = {
-    username: "Xclipse Notify",
-    embeds: [{
-      title: "📩 New Coming Soon Signup",
-      color: 0x10b981,
-      fields: [
-        { name: "Name", value: name, inline: true },
-        { name: "Email", value: email, inline: true }
-      ],
-      footer: { text: "Xclipse Networks" },
-      timestamp: new Date()
-    }]
-  };
-
+  submitBtn.disabled = true;
+  statusMsg.innerText = "Sending...";
+  
   try {
     await fetch(webhookURL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
+      body: JSON.stringify({
+        embeds: [{
+          title: "New Sign-up",
+          color: 0x10b981,
+          fields: [
+            { name: "Name", value: document.getElementById('userName').value, inline: true },
+            { name: "Email", value: document.getElementById('userEmail').value, inline: true }
+          ]
+        }]
+      })
     });
-
-    status.innerText = "✅ You're on the list!";
-    e.target.reset();
+    statusMsg.innerText = "Success! You're on the list.";
+    notifyForm.reset();
   } catch {
-    status.innerText = "❌ Failed to send. Try again later.";
+    statusMsg.innerText = "Error sending. Try again.";
+    submitBtn.disabled = false;
   }
 });
 </script>
-
 </body>
 </html>
